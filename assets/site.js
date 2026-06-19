@@ -1,25 +1,134 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Booking toggle functionality
-  const bookingToggle = document.querySelector("[data-booking-toggle]");
-  const bookingPanel = document.querySelector(".booking-panel-hidden");
-  
-  if (bookingToggle && bookingPanel) {
-    bookingToggle.addEventListener("click", () => {
-      const isActive = bookingPanel.classList.contains("active");
-      bookingPanel.classList.toggle("active");
-      bookingToggle.setAttribute("aria-expanded", !isActive);
-    });
+  const menuToggle = document.querySelector("[data-menu-toggle]");
+  const menu = document.querySelector("[data-menu]");
+  const menuBackdrop = document.querySelector("[data-menu-backdrop]");
 
-    // Close form when clicking outside
-    document.addEventListener("click", (e) => {
-      const bookingSection = document.querySelector("[data-booking-section]");
-      if (bookingPanel.classList.contains("active") && 
-          !bookingSection.contains(e.target)) {
-        bookingPanel.classList.remove("active");
-        bookingToggle.setAttribute("aria-expanded", false);
+  if (menuToggle && menu) {
+    const closeMenu = () => {
+      menu.classList.remove("is-open");
+      menuBackdrop?.classList.remove("is-open");
+      menuToggle.classList.remove("is-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Открыть меню");
+      document.body.classList.remove("menu-open");
+    };
+
+    const openMenu = () => {
+      menu.classList.add("is-open");
+      menuBackdrop?.classList.add("is-open");
+      menuToggle.classList.add("is-open");
+      menuToggle.setAttribute("aria-expanded", "true");
+      menuToggle.setAttribute("aria-label", "Закрыть меню");
+      document.body.classList.add("menu-open");
+    };
+
+    menuToggle.addEventListener("click", () => {
+      if (menu.classList.contains("is-open")) {
+        closeMenu();
+      } else {
+        openMenu();
       }
     });
+
+    menu.addEventListener("click", (event) => {
+      if (event.target.closest("a")) closeMenu();
+    });
+
+    menuBackdrop?.addEventListener("click", closeMenu);
+
+    document.addEventListener("click", (event) => {
+      const clickedMenu = event.target.closest("[data-menu]");
+      const clickedToggle = event.target.closest("[data-menu-toggle]");
+      if (!clickedMenu && !clickedToggle && menu.classList.contains("is-open")) closeMenu();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeMenu();
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 1024) closeMenu();
+    });
   }
+
+  // Smooth FAQ accordion
+  document.querySelectorAll(".faq-item").forEach((item) => {
+    const summary = item.querySelector("summary");
+    let answer = item.querySelector(".faq-answer");
+    if (!summary) return;
+
+    if (!answer) {
+      answer = document.createElement("div");
+      answer.className = "faq-answer";
+      while (summary.nextSibling) answer.append(summary.nextSibling);
+      item.append(answer);
+    }
+
+    item.classList.add("is-animated");
+    if (item.open) {
+      answer.style.height = "auto";
+      answer.style.opacity = "1";
+    } else {
+      answer.style.height = "0px";
+      answer.style.opacity = "0";
+    }
+
+    summary.addEventListener("click", (event) => {
+      event.preventDefault();
+      if (item.dataset.animating === "true") return;
+
+      const opening = !item.open;
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reducedMotion) {
+        item.open = opening;
+        answer.style.height = opening ? "auto" : "0px";
+        answer.style.opacity = opening ? "1" : "0";
+        return;
+      }
+
+      item.dataset.animating = "true";
+
+      const finish = () => {
+        if (opening) {
+          answer.style.height = "auto";
+        } else {
+          item.open = false;
+        }
+        delete item.dataset.animating;
+      };
+
+      let finished = false;
+      const finishOnce = () => {
+        if (finished) return;
+        finished = true;
+        answer.removeEventListener("transitionend", onTransitionEnd);
+        finish();
+      };
+      const onTransitionEnd = (transitionEvent) => {
+        if (transitionEvent.propertyName === "height") finishOnce();
+      };
+
+      answer.addEventListener("transitionend", onTransitionEnd);
+      window.setTimeout(finishOnce, 460);
+
+      if (opening) {
+        item.open = true;
+        answer.style.height = "0px";
+        answer.style.opacity = "0";
+        requestAnimationFrame(() => {
+          answer.style.height = `${answer.scrollHeight}px`;
+          answer.style.opacity = "1";
+        });
+      } else {
+        answer.style.height = `${answer.scrollHeight}px`;
+        answer.style.opacity = "1";
+        requestAnimationFrame(() => {
+          answer.style.height = "0px";
+          answer.style.opacity = "0";
+        });
+      }
+    });
+  });
 
   // Gallery carousel
   document.querySelectorAll("[data-gallery-card]").forEach((card) => {

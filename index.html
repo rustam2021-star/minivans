@@ -13,11 +13,11 @@
   <meta property="og:title" content="Аренда минивэнов и микроавтобусов в Ташкенте | Minivan24">
   <meta property="og:description" content="Аренда минивэнов и микроавтобусов в Ташкенте с водителем и без: трансферы, свадьбы, экскурсии, поездки по Узбекистану, заявка в WhatsApp.">
   <meta property="og:url" content="https://minivan24.uz/">
-  <meta property="og:image" content="https://minivan24.uz/uploads/2024/11/mercedes-sprinter-hero.webp">
+  <meta property="og:image" content="https://minivan24.uz/uploads/2026/06/services-hero-transport-2k.webp">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Аренда минивэнов и микроавтобусов в Ташкенте | Minivan24">
   <meta name="twitter:description" content="Аренда минивэнов и микроавтобусов в Ташкенте с водителем и без: трансферы, свадьбы, экскурсии, поездки по Узбекистану, заявка в WhatsApp.">
-  <meta name="twitter:image" content="https://minivan24.uz/uploads/2024/11/mercedes-sprinter-hero.webp">
+  <meta name="twitter:image" content="https://minivan24.uz/uploads/2026/06/services-hero-transport-2k.webp">
   <link rel="icon" href="uploads/2024/11/minivan24-favicon.png">
   <link rel="stylesheet" href="assets/site.css">
   <script src="assets/site.js" defer></script>
@@ -39,30 +39,49 @@
   <header class="header">
     <div class="wrap nav">
       <a class="logo" href="index.html" aria-label="Minivan24"><img src="uploads/2024/11/minivan24-logo.png" alt="Minivan24"></a>
-      <nav class="menu" aria-label="Главное меню">
+      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-menu" data-menu-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="menu" id="site-menu" aria-label="Главное меню" data-menu>
         <a href="index.html" class="active">Главная</a>
         <a href="services/index.html">Услуги</a>
         <a href="cars/index.html">Автопарк</a>
         <a href="news/index.html">Новости</a>
         <a href="kontakty/index.html">Контакты</a>
+        <div class="menu-contact">
+          <span class="menu-contact-label">Контакты</span>
+          <span class="menu-contact-address">Ташкент, улица Амир Темур 99а</span>
+          <a class="menu-contact-phone" href="tel:+998990084000">+998 99 008 4000</a>
+          <div class="menu-contact-links">
+            <a href="https://t.me/minivanuzb">Telegram</a>
+            <a href="https://www.instagram.com/minivanuz/profilecard/?igsh=YmN3bm9vbjE0ajNq" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://wa.me/998990084000" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+        <a class="menu-cta" href="https://wa.me/998990084000" target="_blank" rel="noopener">Связаться</a>
       </nav>
-      <div class="nav-actions"><a class="btn" href="https://wa.me/998990084000" target="_blank" rel="noopener">Забронировать</a></div>
+      <div class="nav-actions"><a class="btn" href="https://wa.me/998990084000" target="_blank" rel="noopener">Связаться</a></div>
     </div>
+    <div class="menu-backdrop" data-menu-backdrop></div>
   </header>
     <main>
-    <section class="hero hero-sales" style="--hero-image: url('uploads/2024/11/hero-bg-premium.png')">
+    <section class="hero hero-sales" style="--hero-image: url('uploads/2026/06/services-hero-transport-2k.webp')">
+      <span class="hero-ambient" aria-hidden="true"></span>
       <div class="wrap hero-sales-grid">
         <div class="hero-copy">
           <span class="eyebrow">Minivan24 Tashkent</span>
           <h1>Аренда минивэнов и микроавтобусов в Ташкенте с водителем</h1>
           <p>KIA Carnival, Hyundai Starex, Mercedes-Benz Sprinter и трансферы для семьи, гостей, свадеб, аэропорта и поездок по Узбекистану. Заранее уточняем маршрут, багаж и цену.</p>
           <div class="hero-actions">
-            <a class="btn" href="#booking">Рассчитать стоимость</a>
-            <a class="btn ghost" href="https://wa.me/998990084000" target="_blank" rel="noopener">Написать в WhatsApp</a>
+            <a class="btn desktop-booking-link" href="#booking">Подобрать автомобиль</a>
+            <a class="btn mobile-contact-link" href="https://wa.me/998990084000" target="_blank" rel="noopener">Написать в WhatsApp</a>
+            <a class="btn ghost" href="cars/index.html">Смотреть автопарк</a>
           </div>
         </div>
         <aside class="hero-deal" aria-label="Популярный автомобиль">
-          <img src="uploads/2024/11/kia-carnival-photo-01.webp" alt="KIA Carnival для аренды в Ташкенте">
+          <img src="uploads/2026/06/home-kia-carnival-feature-2k.webp" alt="KIA Carnival для аренды в Ташкенте">
           <div class="hero-deal-body">
             <span class="eyebrow">Популярный выбор</span>
             <h2>KIA Carnival</h2>
@@ -73,19 +92,19 @@
       </div>
     </section>
 
-    <section class="booking" id="booking" data-booking-section>
+    <section class="booking" id="booking">
       <div class="wrap">
-        <button class="booking-toggle-btn" data-booking-toggle aria-label="Открыть форму заявки">
-          <span>Рассчитать стоимость</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="6 9 12 15 18 9"></polyline>
-          </svg>
-        </button>
-        <form class="booking-panel booking-panel-hidden" action="https://wa.me/998990084000" target="_blank" data-whatsapp-form>
+        <div class="mobile-booking-cta">
+          <span class="eyebrow">Быстрая заявка</span>
+          <h2>Отправьте маршрут в WhatsApp</h2>
+          <p>Дата, адрес подачи, пассажиры и багаж — этого достаточно для первого ответа.</p>
+          <a class="btn" href="https://wa.me/998990084000" target="_blank" rel="noopener">Отправить заявку</a>
+        </div>
+        <form class="booking-panel" action="https://wa.me/998990084000" target="_blank" data-whatsapp-form>
           <div class="booking-head">
             <div>
-              <span class="eyebrow">Быстрый расчет</span>
-              <h2>Оставьте детали поездки</h2>
+              <span class="eyebrow">Заявка за минуту</span>
+              <h2>Маршрут и детали</h2>
             </div>
             <p>Менеджер получит заявку в WhatsApp и уточнит цену, автомобиль и время подачи.</p>
           </div>
@@ -101,7 +120,7 @@
             <label>Формат<select name="driver"><option>С водителем</option><option>Без водителя</option><option>Нужно уточнить</option></select></label>
             <label class="booking-wide">Комментарий<textarea name="comment" placeholder="Детские кресла, ожидание, несколько адресов, ночная подача"></textarea></label>
             <label class="form-hp">Сайт<input name="website" tabindex="-1" autocomplete="off"></label>
-            <button class="btn booking-submit" type="submit">Рассчитать стоимость</button>
+            <button class="btn booking-submit" type="submit">Отправить заявку</button>
           </div>
         </form>
       </div>
@@ -111,9 +130,9 @@
       <div class="wrap">
         <div class="section-head"><div><span class="eyebrow">Услуги</span><h2 class="section-title">Популярные услуги аренды</h2></div><a class="btn ghost" href="services/index.html">Все услуги</a></div>
         <div class="grid grid-3">
-          <article class="card service-card"><a class="card-media" href="services/arenda-minivena-v-tashkente/index.html"><img src="uploads/2026/06/service-minivan-tashkent-city.webp" alt="Аренда минивэна в Ташкенте" loading="lazy"></a><div class="card-body"><h2><a class="card-title" href="services/arenda-minivena-v-tashkente/index.html">Минивэн для семьи и гостей</a></h2><p>Для аэропорта, города, отеля, экскурсий и поездок с багажом.</p><div class="service-tags"><span>7-8 мест</span><span>KIA Carnival</span><span>багаж</span></div></div></article>
-          <article class="card service-card"><a class="card-media" href="services/transfer-aeroport-tashkent/index.html"><img src="uploads/2026/06/service-airport-transfer-tashkent.webp" alt="Трансфер аэропорт Ташкент" loading="lazy"></a><div class="card-body"><h2><a class="card-title" href="services/transfer-aeroport-tashkent/index.html">Трансфер аэропорт 24/7</a></h2><p>Встреча рейса, помощь с багажом и подача минивэна ко времени.</p><div class="service-tags"><span>рейс</span><span>отель</span><span>ночью</span></div></div></article>
-          <article class="card service-card"><a class="card-media" href="services/mikroavtobus-na-svadbu/index.html"><img src="uploads/2026/06/service-wedding-premium-sprinter-bukhara.webp" alt="Микроавтобус на свадьбу" loading="lazy"></a><div class="card-body"><h2><a class="card-title" href="services/mikroavtobus-na-svadbu/index.html">Свадьбы и группы</a></h2><p>Развоз гостей, несколько адресов, ожидание и комфортный салон.</p><div class="service-tags"><span>гости</span><span>Sprinter</span><span>маршрут</span></div></div></article>
+          <article class="card service-card"><a class="card-media" href="services/arenda-minivena-v-tashkente/index.html"><img src="uploads/2026/06/home-service-minivan-tashkent-2k.webp" alt="Аренда минивэна в Ташкенте" loading="lazy"></a><div class="card-body"><h2><a class="card-title" href="services/arenda-minivena-v-tashkente/index.html">Минивэн для семьи и гостей</a></h2><p>Для аэропорта, города, отеля, экскурсий и поездок с багажом.</p><div class="service-tags"><span>7-8 мест</span><span>KIA Carnival</span><span>багаж</span></div></div></article>
+          <article class="card service-card"><a class="card-media" href="services/transfer-aeroport-tashkent/index.html"><img src="uploads/2026/06/home-service-airport-transfer-2k.webp" alt="Трансфер аэропорт Ташкент" loading="lazy"></a><div class="card-body"><h2><a class="card-title" href="services/transfer-aeroport-tashkent/index.html">Трансфер аэропорт 24/7</a></h2><p>Встреча рейса, помощь с багажом и подача минивэна ко времени.</p><div class="service-tags"><span>рейс</span><span>отель</span><span>ночью</span></div></div></article>
+          <article class="card service-card"><a class="card-media" href="services/mikroavtobus-na-svadbu/index.html"><img src="uploads/2026/06/home-service-wedding-sprinter-2k.webp" alt="Микроавтобус на свадьбу" loading="lazy"></a><div class="card-body"><h2><a class="card-title" href="services/mikroavtobus-na-svadbu/index.html">Свадьбы и группы</a></h2><p>Развоз гостей, несколько адресов, ожидание и комфортный салон.</p><div class="service-tags"><span>гости</span><span>Sprinter</span><span>маршрут</span></div></div></article>
         </div>
       </div>
     </section>
@@ -143,10 +162,10 @@
           <article><strong>3 способа</strong><span>оплаты: наличные, карта, перечисление</span></article>
         </div>
         <div class="grid grid-4 trust-grid">
-          <article class="feature"><div class="icon">✓</div><h3>Реальные фото</h3><p>Показываем салон, багажник и состояние автомобиля до бронирования.</p></article>
-          <article class="feature"><div class="icon">✓</div><h3>Договор и чек</h3><p>Работаем с частными клиентами, гостями и организациями.</p></article>
-          <article class="feature"><div class="icon">✓</div><h3>Детские кресла</h3><p>По запросу подготовим кресло и учтем багаж заранее.</p></article>
-          <article class="feature"><div class="icon">✓</div><h3>Связь до подачи</h3><p>Подтверждаем автомобиль, водителя и точку встречи.</p></article>
+          <article class="feature"><span class="icon" aria-hidden="true"><img src="assets/icons/check-badge.svg" alt="" width="40" height="40" decoding="async"></span><h3>Реальные фото</h3><p>Показываем салон, багажник и состояние автомобиля до бронирования.</p></article>
+          <article class="feature"><span class="icon" aria-hidden="true"><img src="assets/icons/check-badge.svg" alt="" width="40" height="40" decoding="async"></span><h3>Договор и чек</h3><p>Работаем с частными клиентами, гостями и организациями.</p></article>
+          <article class="feature"><span class="icon" aria-hidden="true"><img src="assets/icons/check-badge.svg" alt="" width="40" height="40" decoding="async"></span><h3>Детские кресла</h3><p>По запросу подготовим кресло и учтем багаж заранее.</p></article>
+          <article class="feature"><span class="icon" aria-hidden="true"><img src="assets/icons/check-badge.svg" alt="" width="40" height="40" decoding="async"></span><h3>Связь до подачи</h3><p>Подтверждаем автомобиль, водителя и точку встречи.</p></article>
         </div>
       </div>
     </section>
@@ -156,13 +175,13 @@
         <div class="section-head"><div><span class="eyebrow">Автопарк</span><h2 class="section-title">Автомобили под разные задачи</h2></div><div class="carousel-actions"><button class="slider-btn" type="button" data-cars-prev aria-label="Предыдущие автомобили">&lsaquo;</button><button class="slider-btn" type="button" data-cars-next aria-label="Следующие автомобили">&rsaquo;</button><a class="btn ghost" href="cars/index.html">Смотреть автопарк</a></div></div>
         <div class="cars-carousel" data-cars-carousel><div class="cars-track">          <article class="card carousel-card" data-gallery-card>
             <div class="card-media car-gallery">
-              <a href="cars/kia-carnival/index.html" aria-label="KIA Carnival"><img src="uploads/2024/11/kia-carnival-photo-01.webp" alt="KIA Carnival" data-slide="0" class="active"><img src="uploads/2024/11/kia-carnival-photo-02.webp" alt="KIA Carnival" data-slide="1"><img src="uploads/2024/11/kia-carnival-photo-03.webp" alt="KIA Carnival" data-slide="2"><img src="uploads/2024/11/kia-carnival-photo-06.webp" alt="KIA Carnival" data-slide="3"></a>
+              <a href="cars/kia-carnival/index.html" aria-label="KIA Carnival «Комфорт»"><img src="uploads/2026/06/home-kia-carnival-photo-01-2k.webp" alt="KIA Carnival «Комфорт»" data-slide="0" class="active"><img src="uploads/2026/06/home-kia-carnival-photo-02-2k.webp" alt="KIA Carnival «Комфорт»" data-slide="1"><img src="uploads/2026/06/home-kia-carnival-photo-03-2k.webp" alt="KIA Carnival «Комфорт»" data-slide="2"><img src="uploads/2026/06/home-kia-carnival-photo-06-2k.webp" alt="KIA Carnival «Комфорт»" data-slide="3"></a>
               <button class="media-btn prev" type="button" data-gallery-prev aria-label="Предыдущее фото">&lsaquo;</button>
               <button class="media-btn next" type="button" data-gallery-next aria-label="Следующее фото">&rsaquo;</button>
               <div class="car-dots"><button type="button" class="car-dot active" data-slide="0" aria-label="Фото 1"></button><button type="button" class="car-dot" data-slide="1" aria-label="Фото 2"></button><button type="button" class="car-dot" data-slide="2" aria-label="Фото 3"></button><button type="button" class="car-dot" data-slide="3" aria-label="Фото 4"></button></div>
             </div>
             <div class="card-body">
-              <h2><a class="card-title" href="cars/kia-carnival/index.html">KIA Carnival</a></h2>
+              <h2><a class="card-title" href="cars/kia-carnival/index.html">KIA Carnival «Комфорт»</a></h2>
               <p>Комфортный минивэн для семьи, деловой поездки, трансфера из аэропорта и путешествий по Узбекистану.</p>
               <div class="specs"><span>7-8 мест</span><span>Большой багажник</span><span>Автомат</span><span>Кондиционер</span></div>
               <div class="price"><strong>150 USD в день</strong><a class="btn" href="cars/kia-carnival/index.html">Подробнее</a></div>
@@ -170,13 +189,13 @@
           </article>
           <article class="card carousel-card" data-gallery-card>
             <div class="card-media car-gallery">
-              <a href="cars/kia-carnival-2/index.html" aria-label="KIA Carnival"><img src="uploads/2024/11/kia-carnival-photo-02.webp" alt="KIA Carnival" data-slide="0" class="active"><img src="uploads/2024/11/kia-carnival-photo-04.webp" alt="KIA Carnival" data-slide="1"><img src="uploads/2024/11/kia-carnival-photo-05.webp" alt="KIA Carnival" data-slide="2"><img src="uploads/2024/11/kia-carnival-photo-07.webp" alt="KIA Carnival" data-slide="3"></a>
+              <a href="cars/kia-carnival-2/index.html" aria-label="KIA Carnival «Премиум»"><img src="uploads/2026/06/home-kia-carnival-photo-02-2k.webp" alt="KIA Carnival «Премиум»" data-slide="0" class="active"><img src="uploads/2026/06/home-kia-carnival-photo-04-2k.webp" alt="KIA Carnival «Премиум»" data-slide="1"><img src="uploads/2026/06/home-kia-carnival-photo-05-2k.webp" alt="KIA Carnival «Премиум»" data-slide="2"><img src="uploads/2026/06/home-kia-carnival-photo-07-2k.webp" alt="KIA Carnival «Премиум»" data-slide="3"></a>
               <button class="media-btn prev" type="button" data-gallery-prev aria-label="Предыдущее фото">&lsaquo;</button>
               <button class="media-btn next" type="button" data-gallery-next aria-label="Следующее фото">&rsaquo;</button>
               <div class="car-dots"><button type="button" class="car-dot active" data-slide="0" aria-label="Фото 1"></button><button type="button" class="car-dot" data-slide="1" aria-label="Фото 2"></button><button type="button" class="car-dot" data-slide="2" aria-label="Фото 3"></button><button type="button" class="car-dot" data-slide="3" aria-label="Фото 4"></button></div>
             </div>
             <div class="card-body">
-              <h2><a class="card-title" href="cars/kia-carnival-2/index.html">KIA Carnival</a></h2>
+              <h2><a class="card-title" href="cars/kia-carnival-2/index.html">KIA Carnival «Премиум»</a></h2>
               <p>Просторный KIA Carnival для гостей, туристов и поездок с большим багажом.</p>
               <div class="specs"><span>7 мест</span><span>Премиум-салон</span><span>Автомат</span><span>Климат-контроль</span></div>
               <div class="price"><strong>150 USD в день</strong><a class="btn" href="cars/kia-carnival-2/index.html">Подробнее</a></div>
@@ -184,13 +203,13 @@
           </article>
           <article class="card carousel-card" data-gallery-card>
             <div class="card-media car-gallery">
-              <a href="cars/kia-carnival-3/index.html" aria-label="KIA Carnival"><img src="uploads/2024/11/kia-carnival-photo-03.webp" alt="KIA Carnival" data-slide="0" class="active"><img src="uploads/2024/11/kia-carnival-photo-08.webp" alt="KIA Carnival" data-slide="1"><img src="uploads/2024/11/kia-carnival-photo-09.webp" alt="KIA Carnival" data-slide="2"><img src="uploads/2024/11/kia-carnival-photo-10.webp" alt="KIA Carnival" data-slide="3"></a>
+              <a href="cars/kia-carnival-3/index.html" aria-label="KIA Carnival «Семейный»"><img src="uploads/2026/06/home-kia-carnival-photo-03-2k.webp" alt="KIA Carnival «Семейный»" data-slide="0" class="active"><img src="uploads/2026/06/home-kia-carnival-photo-08-2k.webp" alt="KIA Carnival «Семейный»" data-slide="1"><img src="uploads/2026/06/home-kia-carnival-photo-09-2k.webp" alt="KIA Carnival «Семейный»" data-slide="2"><img src="uploads/2026/06/home-kia-carnival-photo-10-2k.webp" alt="KIA Carnival «Семейный»" data-slide="3"></a>
               <button class="media-btn prev" type="button" data-gallery-prev aria-label="Предыдущее фото">&lsaquo;</button>
               <button class="media-btn next" type="button" data-gallery-next aria-label="Следующее фото">&rsaquo;</button>
               <div class="car-dots"><button type="button" class="car-dot active" data-slide="0" aria-label="Фото 1"></button><button type="button" class="car-dot" data-slide="1" aria-label="Фото 2"></button><button type="button" class="car-dot" data-slide="2" aria-label="Фото 3"></button><button type="button" class="car-dot" data-slide="3" aria-label="Фото 4"></button></div>
             </div>
             <div class="card-body">
-              <h2><a class="card-title" href="cars/kia-carnival-3/index.html">KIA Carnival</a></h2>
+              <h2><a class="card-title" href="cars/kia-carnival-3/index.html">KIA Carnival «Семейный»</a></h2>
               <p>Удобный вариант для семейных маршрутов, экскурсий и встреч делегаций.</p>
               <div class="specs"><span>7-8 мест</span><span>Комфорт</span><span>Автомат</span><span>Город/трасса</span></div>
               <div class="price"><strong>150 USD в день</strong><a class="btn" href="cars/kia-carnival-3/index.html">Подробнее</a></div>
@@ -198,13 +217,13 @@
           </article>
           <article class="card carousel-card" data-gallery-card>
             <div class="card-media car-gallery">
-              <a href="cars/kia-carnival-4/index.html" aria-label="KIA Carnival"><img src="uploads/2024/11/kia-carnival-photo-04.webp" alt="KIA Carnival" data-slide="0" class="active"><img src="uploads/2024/11/kia-carnival-photo-01.webp" alt="KIA Carnival" data-slide="1"><img src="uploads/2024/11/kia-carnival-photo-05.webp" alt="KIA Carnival" data-slide="2"><img src="uploads/2024/11/kia-carnival-photo-06.webp" alt="KIA Carnival" data-slide="3"></a>
+              <a href="cars/kia-carnival-4/index.html" aria-label="KIA Carnival «Трансфер»"><img src="uploads/2026/06/home-kia-carnival-photo-04-2k.webp" alt="KIA Carnival «Трансфер»" data-slide="0" class="active"><img src="uploads/2026/06/home-kia-carnival-photo-01-2k.webp" alt="KIA Carnival «Трансфер»" data-slide="1"><img src="uploads/2026/06/home-kia-carnival-photo-05-2k.webp" alt="KIA Carnival «Трансфер»" data-slide="2"><img src="uploads/2026/06/home-kia-carnival-photo-06-2k.webp" alt="KIA Carnival «Трансфер»" data-slide="3"></a>
               <button class="media-btn prev" type="button" data-gallery-prev aria-label="Предыдущее фото">&lsaquo;</button>
               <button class="media-btn next" type="button" data-gallery-next aria-label="Следующее фото">&rsaquo;</button>
               <div class="car-dots"><button type="button" class="car-dot active" data-slide="0" aria-label="Фото 1"></button><button type="button" class="car-dot" data-slide="1" aria-label="Фото 2"></button><button type="button" class="car-dot" data-slide="2" aria-label="Фото 3"></button><button type="button" class="car-dot" data-slide="3" aria-label="Фото 4"></button></div>
             </div>
             <div class="card-body">
-              <h2><a class="card-title" href="cars/kia-carnival-4/index.html">KIA Carnival</a></h2>
+              <h2><a class="card-title" href="cars/kia-carnival-4/index.html">KIA Carnival «Трансфер»</a></h2>
               <p>Минивэн для трансфера, свадьбы, встречи гостей и поездок по Ташкенту.</p>
               <div class="specs"><span>7 мест</span><span>Багаж</span><span>Автомат</span><span>Кондиционер</span></div>
               <div class="price"><strong>150 USD в день</strong><a class="btn" href="cars/kia-carnival-4/index.html">Подробнее</a></div>
@@ -212,13 +231,13 @@
           </article>
           <article class="card carousel-card" data-gallery-card>
             <div class="card-media car-gallery">
-              <a href="cars/kia-carnival-5/index.html" aria-label="KIA Carnival"><img src="uploads/2024/11/kia-carnival-photo-05.webp" alt="KIA Carnival" data-slide="0" class="active"><img src="uploads/2024/11/kia-carnival-photo-07.webp" alt="KIA Carnival" data-slide="1"><img src="uploads/2024/11/kia-carnival-photo-08.webp" alt="KIA Carnival" data-slide="2"><img src="uploads/2024/11/kia-carnival-photo-10.webp" alt="KIA Carnival" data-slide="3"></a>
+              <a href="cars/kia-carnival-5/index.html" aria-label="KIA Carnival «Бизнес»"><img src="uploads/2026/06/home-kia-carnival-photo-05-2k.webp" alt="KIA Carnival «Бизнес»" data-slide="0" class="active"><img src="uploads/2026/06/home-kia-carnival-photo-07-2k.webp" alt="KIA Carnival «Бизнес»" data-slide="1"><img src="uploads/2026/06/home-kia-carnival-photo-08-2k.webp" alt="KIA Carnival «Бизнес»" data-slide="2"><img src="uploads/2026/06/home-kia-carnival-photo-10-2k.webp" alt="KIA Carnival «Бизнес»" data-slide="3"></a>
               <button class="media-btn prev" type="button" data-gallery-prev aria-label="Предыдущее фото">&lsaquo;</button>
               <button class="media-btn next" type="button" data-gallery-next aria-label="Следующее фото">&rsaquo;</button>
               <div class="car-dots"><button type="button" class="car-dot active" data-slide="0" aria-label="Фото 1"></button><button type="button" class="car-dot" data-slide="1" aria-label="Фото 2"></button><button type="button" class="car-dot" data-slide="2" aria-label="Фото 3"></button><button type="button" class="car-dot" data-slide="3" aria-label="Фото 4"></button></div>
             </div>
             <div class="card-body">
-              <h2><a class="card-title" href="cars/kia-carnival-5/index.html">KIA Carnival</a></h2>
+              <h2><a class="card-title" href="cars/kia-carnival-5/index.html">KIA Carnival «Бизнес»</a></h2>
               <p>Современный минивэн для тех, кому важны плавная поездка и просторный салон.</p>
               <div class="specs"><span>7-8 мест</span><span>Премиум</span><span>Автомат</span><span>Комфорт</span></div>
               <div class="price"><strong>100 USD в день</strong><a class="btn" href="cars/kia-carnival-5/index.html">Подробнее</a></div>
@@ -226,7 +245,7 @@
           </article>
           <article class="card carousel-card" data-gallery-card>
             <div class="card-media car-gallery">
-              <a href="cars/hyundai-starex/index.html" aria-label="HYUNDAI Starex"><img src="uploads/2024/11/hyundai-starex-photo-01.webp" alt="HYUNDAI Starex" data-slide="0" class="active"><img src="uploads/2024/11/hyundai-starex-photo-02.webp" alt="HYUNDAI Starex" data-slide="1"><img src="uploads/2024/11/hyundai-starex-photo-03.webp" alt="HYUNDAI Starex" data-slide="2"><img src="uploads/2024/11/hyundai-starex-photo-04.webp" alt="HYUNDAI Starex" data-slide="3"></a>
+              <a href="cars/hyundai-starex/index.html" aria-label="HYUNDAI Starex"><img src="uploads/2026/06/home-hyundai-starex-photo-01-2k.webp" alt="HYUNDAI Starex" data-slide="0" class="active"><img src="uploads/2026/06/home-hyundai-starex-photo-02-2k.webp" alt="HYUNDAI Starex" data-slide="1"><img src="uploads/2026/06/home-hyundai-starex-photo-03-2k.webp" alt="HYUNDAI Starex" data-slide="2"><img src="uploads/2026/06/home-hyundai-starex-photo-04-2k.webp" alt="HYUNDAI Starex" data-slide="3"></a>
               <button class="media-btn prev" type="button" data-gallery-prev aria-label="Предыдущее фото">&lsaquo;</button>
               <button class="media-btn next" type="button" data-gallery-next aria-label="Следующее фото">&rsaquo;</button>
               <div class="car-dots"><button type="button" class="car-dot active" data-slide="0" aria-label="Фото 1"></button><button type="button" class="car-dot" data-slide="1" aria-label="Фото 2"></button><button type="button" class="car-dot" data-slide="2" aria-label="Фото 3"></button><button type="button" class="car-dot" data-slide="3" aria-label="Фото 4"></button></div>
@@ -247,39 +266,39 @@
         <div><span class="eyebrow">FAQ</span><h2 class="section-title compact-title">Частые вопросы перед заказом</h2><div class="faq-list">
                     <details class="faq-item">
             <summary>Можно ли заказать минивэн в аэропорт?</summary>
-            <p>Да. Укажите номер рейса, время прилета, количество пассажиров и багаж. Мы согласуем место встречи и подачу.</p>
+            <div class="faq-answer"><p>Да. Укажите номер рейса, время прилета, количество пассажиров и багаж. Мы согласуем место встречи и подачу.</p></div>
           </details>
           <details class="faq-item">
             <summary>Можно ли арендовать авто без водителя?</summary>
-            <p>По части автомобилей возможен формат без водителя, но чаще для трансферов и гостей удобнее аренда с водителем.</p>
+            <div class="faq-answer"><p>По части автомобилей возможен формат без водителя, но чаще для трансферов и гостей удобнее аренда с водителем.</p></div>
           </details>
           <details class="faq-item">
             <summary>Сколько мест в KIA Carnival?</summary>
-            <p>Обычно 7-8 мест. Если багажа много, лучше заранее указать количество чемоданов.</p>
+            <div class="faq-answer"><p>Обычно 7-8 мест. Если багажа много, лучше заранее указать количество чемоданов.</p></div>
           </details>
           <details class="faq-item">
             <summary>Есть ли детское кресло?</summary>
-            <p>Да, подготовим детское кресло по запросу. Сообщите возраст ребенка при заявке.</p>
+            <div class="faq-answer"><p>Да, подготовим детское кресло по запросу. Сообщите возраст ребенка при заявке.</p></div>
           </details>
           <details class="faq-item">
             <summary>Можно ли оплатить перечислением?</summary>
-            <p>Да, возможна оплата наличными, картой или перечислением для организаций.</p>
+            <div class="faq-answer"><p>Да, возможна оплата наличными, картой или перечислением для организаций.</p></div>
           </details>
           <details class="faq-item">
             <summary>Работаете ночью?</summary>
-            <p>Да, подача в аэропорт и ночные поездки возможны 24/7 по предварительному согласованию.</p>
+            <div class="faq-answer"><p>Да, подача в аэропорт и ночные поездки возможны 24/7 по предварительному согласованию.</p></div>
           </details>
           <details class="faq-item">
             <summary>Можно ли заказать микроавтобус на свадьбу?</summary>
-            <p>Да. Подберем минивэн или Sprinter под количество гостей, адреса и время ожидания.</p>
+            <div class="faq-answer"><p>Да. Подберем минивэн или Sprinter под количество гостей, адреса и время ожидания.</p></div>
           </details>
           <details class="faq-item">
             <summary>Сколько стоит поездка в Самарканд?</summary>
-            <p>Цена зависит от даты, маршрута, ожидания, количества пассажиров и класса авто. Отправьте детали, и мы рассчитаем стоимость.</p>
+            <div class="faq-answer"><p>Цена зависит от даты, маршрута, ожидания, количества пассажиров и класса авто. Отправьте детали, и мы заранее объясним итоговую цену.</p></div>
           </details>
 
         </div></div>
-        <div class="panel"><h2>Нужен точный расчет?</h2><p>Отправьте маршрут, дату, пассажиров и багаж. Мы ответим в WhatsApp и заранее объясним, что входит в цену.</p><p><a class="btn" href="https://wa.me/998990084000" target="_blank" rel="noopener">Написать в WhatsApp</a></p></div>
+        <div class="panel"><h2>Уточнить маршрут</h2><p>Отправьте маршрут, дату, пассажиров и багаж. Мы ответим в WhatsApp и заранее объясним, что входит в цену.</p><p><a class="btn" href="https://wa.me/998990084000" target="_blank" rel="noopener">Описать поездку</a></p></div>
       </div>
     </section>
   </main>
